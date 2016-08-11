@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<extension version="3.1" type="plugin" method="upgrade" group="content">
+
+
+
+	<name>S5 Media Player</name>
+
+	
+
+	<author>Original scripts by http://mediaelementjs.com/. Previous work by Phil Banks. Current additions and maintenance by Shape5.com</author>
+
+
+
+	<authorEmail>contact@shape5.com</authorEmail>
+
+	
+
+	<authorUrl>www.shape5.com</authorUrl>
+
+
+
+	<creationDate>August 2014</creationDate>
+
+
+
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+
+
+
+	<version>2.0.0</version>
+
+
+
+	<description>PLG_S5_MEDIA_PLAYER_XML_DESCRIPTION</description>
+
+
+
+	<files>
+
+
+
+		<folder>media</folder>
+
+
+
+		<filename plugin="s5_media_player">s5_media_player.php</filename>
+
+
+
+		<filename plugin="s5_media_player">helper.php</filename>
+
+
+
+	</files>
+
+
+
+	<languages>
+
+
+
+		<language tag="en-GB">en-GB.plg_content_s5_media_player.ini</language>
+
+
+
+    </languages>
+
+
+
+		<config>
+
+
+
+		<fields name="params">
+
+
+
+			<fieldset name="basic">
+
+				
+
+				<field name="height" type="text" default="480" label="LABEL_HEIGHT" description="DESC_HEIGHT" />
+
+
+
+				<field name="width" type="text" default="1400" label="LABEL_WIDTH" description="DESC_WIDTH" />
+				
+				<field name="responsive" type="radio" default="true" label="LABEL_RESPONSIVE" description="DESC_RESPONSIVE">
+					<option value="false">LABEL_OFF</option>
+					<option value="true">LABEL_ON</option>
+				</field>
+
+
+
+				<field name="player_bg" type="text" default="393939" label="LABEL_PLAYER_BG" description="DESC_PLAYER_BG" />
+
+				
+
+				<field name="bar_bg" type="text" default="1F1F1F" label="LABEL_BAR_BG" description="DESC_BAR_BG" />
+
+				
+
+				<field name="bar_loaded" type="text" default="32ADBC" label="LABEL_BAR_LOADED" description="DESC_BAR_LOADED" />
+
+				
+
+				<field name="bar_current" type="text" default="E1E4E4" label="LABEL_BAR_CURRENT" description="DESC_BAR_CURRENT" />
+
+				
+
+				<field name="volume_bg" type="text" default="1F1F1F" label="LABEL_VOLUME_BG" description="DESC_VOLUME_BG" />
+
+				
+
+				<field name="volume_current" type="text" default="E1E4E4" label="LABEL_VOLUME_STATUS" description="DESC_VOLUME_STATUS" />
+
+				
+
+				<field name="download" type="radio" default="true" label="LABEL_DOWNLOAD" description="DESC_DOWNLOAD">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+				
+
+				<field name="download_link_text" type="text" default="Download Here" label="LABEL_DOWNLOAD_TEXT" />
+
+				
+
+				<field name="autoplay" type="radio" default="false" label="LABEL_AUTOPLAY" description="DESC_AUTOPLAY">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="preload" type="radio" default="true" label="LABEL_PRELOAD" description="DESC_PRELOAD">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="loop" type="radio" default="false" label="LABEL_LOOP" description="DESC_LOOP">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="defaultVolume" type="text" default="0.85" label="LABEL_DEFAULT_VOLUME" description="DESC_DEFAULT_VOLUME" />
+
+
+
+				<field name="show_controls" type="radio" default="true" label="LABEL_HIDE_CONTROLS" description="DESC_HIDE_CONTROLS">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="ipad_controls" type="radio" default="false" label="LABEL_IPAD_CONTROLS" description="DESC_IPAD_CONTROLS">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="iphone_controls" type="radio" default="false" label="LABEL_IPHONE_CONTROLS" description="DESC_IPHONE_CONTROLS">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="android_controls" type="radio" default="false" label="LABEL_ANDROID_CONTROLS" description="DESC_ANDROID_CONTROLS">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="show_hours" type="radio" default="false" label="LABEL_HOURS" description="DESC_HOURS">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="time_frame_count" type="radio" default="false" label="LABEL_TIME_FRAME_COUNT" description="DESC_TIME_FRAME_COUNT">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="timecode_frame_count" type="text" default="25"  label="LABEL_TIME_FRAME_COUNT_NUMBER" description="DESC_TIME_FRAME_COUNT_NUMBER" />
+
+
+
+				<field name="enable_keyboard" type="radio" default="false" label="LABEL_KEYBOARD" description="DESC_KEYBOARD">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="players" type="radio" default="true" label="LABEL_PAUSE" description="DESC_PAUSE">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+				<field name="wmode" type="list" default="default" label="LABEL_WMODE" description="DESC_WMODE">
+
+
+
+					<option value="default">default</option>
+
+
+
+					<option value="opaque">opaque</option>
+
+
+
+					<option value="transparent">transparent</option>
+
+
+
+				</field>
+
+				
+
+				<field name="autosize" type="radio" default="true" label="LABEL_RESIZE" description="DESC_RESIZE">
+					<option value="false">LABEL_OFF</option>
+					<option value="true">LABEL_ON</option>
+				</field>
+
+
+				<field name="media_path" type="text" default="" label="LABEL_MEDIA" description="DESC_MEDIA" />
+
+
+
+				<field name="flash" type="text" default="" label="LABEL_FLASH" description="DESC_FLASH" />
+
+
+
+				<field name="image" type="text" default="" label="LABEL_IMAGE" description="DESC_IMAGE" />
+
+
+
+				<field name="image_visibility" type="radio" default="false" label="LABEL_IMAGE_VISIBILITY" description="DESC_IMAGE_VISIBILITY">
+
+
+
+					<option value="false">LABEL_OFF</option>
+
+
+
+					<option value="true">LABEL_ON</option>
+
+
+
+				</field>
+
+
+
+			</fieldset>
+
+
+
+		</fields>
+
+
+
+	</config>
+
+
+
+</extension>

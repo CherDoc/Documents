@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<specific>
+	<version>2.5</version> 
+	<config>
+		<fields>
+            <fieldset name="s50" label="TPL_FIELD_TS_LABEL">
+                <field name="s51spacer_notice" label="&lt;span style=&quot;display:block;&quot;&gt;Make sure to hover your mouse over each title in this column for a full description of what each field does.&lt;/span&gt;" type="spacer" />
+				
+				<field name="xml_s5_highlight1" type="text:6:6" default="32ADBC" label="TPL_HIGHLIGHT1_LABEL" description="TPL_HIGHLIGHT1_DESC" />
+				
+				<field name="xml_s5_highlight2" type="text:6:6" default="D59C38" label="TPL_HIGHLIGHT2_LABEL" description="TPL_HIGHLIGHT2_DESC" />
+                
+				<field name="xml_s5_header_bg" type="text:6:6" default="495154" label="TPL_HEADER_BG_LABEL" description="TPL_HEADER_BG_DESC" />
+				
+				<field name="xml_s5_custom3_bg" type="text:6:6" default="" label="TPL_CUSTOM3_BG_LABEL" description="TPL_CUSTOM3_BG_DESC" />
+				
+				<field name="xml_s5_header_font" type="text:6:6" default="FFFFFF" label="TPL_HEADER_FONT_LABEL" description="TPL_HEADER_FONT_DESC" />
+				
+				<field name="xml_s5_uppercase" type="select:list" default="yes" label="TPL_UPPERCASE_LABEL" description="TPL_UPPERCASE_DESC">
+					<option value="yes">TPL_UPPERCASE_01</option>
+					<option value="no">TPL_UPPERCASE_02</option>
+				</field>
+				
+				<field name="xml_s5_float_header" type="select:list" default="yes" label="TPL_FLOAT_HEADER_LABEL" description="TPL_FLOAT_HEADER_DESC">
+					<option value="yes">TPL_FLOAT_HEADER_01</option>
+					<option value="no">TPL_FLOAT_HEADER_02</option>
+				</field>
+				
+				<field name="xml_s5_header_float_trigger_height" type="text" default="0" label="TPL_MENU_FLOAT_TRIGGER_HEIGHT_LABEL" description="TPL_MENU_FLOAT_TRIGGER_HEIGHT_DESC" />	
+				
+            </fieldset>
+		</fields>
+	</config>	
+</specific>
